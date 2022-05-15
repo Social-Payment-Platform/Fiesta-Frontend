@@ -2,6 +2,12 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+To Start contributing to Fiesta App: 
+1. Clone the repository
+2. Create a new branch
+3. Run `npm install`
+4. Run `npm start`
+
 ## Available Scripts
 
 In the project directory, you can run:
