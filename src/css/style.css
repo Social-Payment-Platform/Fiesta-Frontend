@@ -1,0 +1,118 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap");
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  text-decoration: none;
+}
+
+h1 {
+  font-size: 3rem;
+  font-weight: 500;
+}
+
+p {
+  font-size: 1.3rem;
+  font-weight: 200;
+}
+
+.sign-in {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100vh;
+}
+
+.form-section {
+  width: 50%;
+  background-color: #fcfcfc;
+  padding: 2rem;
+  margin: 0;
+}
+
+.form-section nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.form-section img {
+  width: 25px;
+  height: 25px;
+  -o-object-fit: contain;
+     object-fit: contain;
+  margin-right: 0.5rem;
+}
+
+.form-section h4 {
+  font-weight: 500;
+  margin: 0;
+}
+
+.form-section header {
+  margin-top: 5rem;
+  margin-bottom: 2rem;
+}
+
+.form-section form {
+  margin-top: 1rem;
+  width: 80%;
+}
+
+.form-section input {
+  margin-bottom: 2rem;
+  padding: 0.8rem;
+}
+
+.form-section input[type='checkbox'] {
+  margin-right: 1rem;
+}
+
+.form-section button {
+  background-color: #fc8f00;
+  border: #fc8f00;
+  border-radius: 10px;
+}
+
+.form-section button:hover {
+  border: 1px solid #fcfcfc;
+  background-color: #fc8f00;
+}
+
+.ellipse-section {
+  width: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #f9f9f9;
+}
+
+.ellipse-section .blur {
+  bottom: 0px;
+  position: absolute;
+  height: 50%;
+  width: 50%;
+  background: rgba(245, 245, 245, 0.02);
+  -webkit-backdrop-filter: blur(50px);
+          backdrop-filter: blur(50px);
+}
+
+@media only screen and (max-width: 768px) {
+  .ellipse-section {
+    display: none;
+  }
+  .form-section {
+    width: 100%;
+  }
+}
+/*# sourceMappingURL=style.css.map */
