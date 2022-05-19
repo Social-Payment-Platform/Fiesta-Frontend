@@ -58,10 +58,10 @@
 
 .skill-section {
     background-color: $grey-90-color;
-    padding: 40px 0 80px;
+    padding: 40px 0 60px;
 
     @include media-breakpoint-up(sm) {
-        padding: 40px 0 240px;
+        padding: 40px 0 121px;
     }
 
     .skill-tab {
