@@ -5,7 +5,7 @@ import { Container, Row, Col, Form, Card, Nav } from "react-bootstrap";
 import searchIcon from "../assets/search-icon.png"
 import profileImage from "../assets/profile-image.jpg"
 import bookmarkIcon from "../assets/bookmark.png"
-import { Link, NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const findProfessional = () => {
     const skills = ['Photographer', 'Event Planner', 'Caterer', 'DJ', 'Chef', 'Videographer', 'Bouncer', 'Ushers', 'Baker', 'Decorator']
@@ -86,17 +86,15 @@ const findProfessional = () => {
             <div className="skill-section">
                 <Container className="px-2">
                     <div className="mx-auto skill-tab">
-                        <Nav variant="pills" defaultActiveKey="/home">
+                        <Nav variant="pills" defaultActiveKey="link-1">
                             <Nav.Item>
-                                <NavLink className='nav-link' to="/home">Near you</NavLink>
+                                <Nav.Link eventKey="link-1">Near you</Nav.Link>
                             </Nav.Item>
                             <Nav.Item>
-                                <Nav.Link eventKey="link-1">Most Searched</Nav.Link>
+                                <Nav.Link eventKey="link-2">Most Searched</Nav.Link>
                             </Nav.Item>
                             <Nav.Item>
-                                <Nav.Link eventKey="disabled">
-                                    Top Rated
-                                </Nav.Link>
+                                <Nav.Link eventKey="link-3">Top Rated</Nav.Link>
                             </Nav.Item>
                         </Nav>
                     </div>

@@ -332,12 +332,12 @@ footer .footer-copyright {
 
 .skill-section {
   background-color: #F9F9F9;
-  padding: 40px 0 80px;
+  padding: 40px 0 60px;
 }
 
 @media (min-width: 576px) {
   .skill-section {
-    padding: 40px 0 240px;
+    padding: 40px 0 121px;
   }
 }
 
