@@ -167,7 +167,7 @@ button {
 .ellipse-section .blur {
   position: absolute;
   bottom: 0;
-  height: 50vh;
+  height: 35vh;
   width: 40vw;
   background: rgba(245, 245, 245, 0.02);
   -webkit-backdrop-filter: blur(50px);
@@ -199,13 +199,13 @@ button {
 
 @media (min-width: 576px) {
   .navbar {
-    padding: 18px 0;
+    padding: 10px;
   }
 }
 
 @media (min-width: 992px) {
   .navbar {
-    padding: 30px 0 14px;
+    padding: 15px 0 14px;
   }
 }
 
