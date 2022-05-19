@@ -7,27 +7,27 @@ body {
 }
 
 h1 {
-  font-size: 3rem;
-  font-weight: 500;
+  font-size: 2.1rem !important;
 }
 
 p {
-  font-size: 1.3rem;
-  font-weight: 200;
+  font-size: 1rem;
+  font-weight: 300;
+}
+
+button {
+  font-size: 1rem !important;
 }
 
 .sign-in {
-  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  height: 100vh;
+  height: 120vh;
 }
 
 .form-section {
-  width: 50%;
-  background-color: #fcfcfc;
-  padding: 2rem;
+  padding: 4rem;
   margin: 0;
 }
 
@@ -40,7 +40,7 @@ p {
           align-items: center;
 }
 
-.form-section img {
+.form-section .logo {
   width: 25px;
   height: 25px;
   -o-object-fit: contain;
@@ -48,9 +48,11 @@ p {
   margin-right: 0.5rem;
 }
 
-.form-section h4 {
+.form-section .logo-text {
   font-weight: 500;
+  font-size: 1.3rem;
   margin: 0;
+  line-height: 1.5rem;
 }
 
 .form-section header {
@@ -60,31 +62,79 @@ p {
 
 .form-section form {
   margin-top: 1rem;
-  width: 80%;
+  width: 70%;
 }
 
-.form-section input {
+.form-section form input {
   margin-bottom: 2rem;
   padding: 0.8rem;
 }
 
-.form-section input[type='checkbox'] {
+.form-section form input[type="checkbox"] {
+  padding: 0.2;
   margin-right: 1rem;
 }
 
-.form-section button {
+.form-section form input[type="checkbox"]:focus, .form-section form input[type="checkbox"]:checked {
+  background-color: #fc8f00;
+}
+
+.form-section form .d-grid {
+  width: 100%;
+}
+
+.form-section form .login button {
   background-color: #fc8f00;
   border: #fc8f00;
   border-radius: 10px;
 }
 
-.form-section button:hover {
+.form-section form .login button:hover, .form-section form .login button:focus {
   border: 1px solid #fcfcfc;
   background-color: #fc8f00;
 }
 
+.form-section form .form-footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.form-section form .form-footer a {
+  color: #fc8f00;
+  margin-left: 1rem;
+  text-decoration: none;
+}
+
+.form-section .alternative {
+  margin-top: 1rem;
+}
+
+.form-section .alternative p {
+  margin: auto 1rem;
+}
+
+.form-section .social-button {
+  margin: 1rem auto;
+}
+
+.form-section .social-button button {
+  color: #5b5b5b;
+  background-color: transparent;
+  border: 2px solid #eeeeee;
+}
+
+.form-section .social-button button svg {
+  font-size: 1.6rem;
+  margin-right: 0.7rem;
+  color: #c13584;
+}
+
 .ellipse-section {
-  width: 50%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -98,10 +148,10 @@ p {
 }
 
 .ellipse-section .blur {
-  bottom: 0px;
   position: absolute;
-  height: 50%;
-  width: 50%;
+  bottom: 0;
+  height: 40vh;
+  width: 40vw;
   background: rgba(245, 245, 245, 0.02);
   -webkit-backdrop-filter: blur(50px);
           backdrop-filter: blur(50px);
@@ -112,6 +162,9 @@ p {
     display: none;
   }
   .form-section {
+    padding: 3rem;
+  }
+  .form-section form {
     width: 100%;
   }
 }

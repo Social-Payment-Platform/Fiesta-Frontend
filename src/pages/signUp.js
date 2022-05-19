@@ -2,6 +2,7 @@ import React from "react";
 import ellipse from "../assets/ellipse.png";
 import { FcGoogle } from "react-icons/fc";
 import { FiInstagram } from "react-icons/fi";
+
 import {
   Button,
   Col,
@@ -20,15 +21,18 @@ const start = () => {
           <p className="logo-text">Fiesta</p>
         </nav>
         <header>
-          <h1>Welcome back</h1>
-          <p>Please fill in your details to sign in</p>
+          <h1>Hello there!</h1>
+          <p>Please fill in your details to get started</p>
         </header>
         <Form>
+          <FormGroup className="mb-3" controlId="formBasicEmail">
+            <FormControl type="text" placeholder="Enter your full name" />
+          </FormGroup>
           <FormGroup className="mb-3" controlId="formBasicEmail">
             <FormControl type="email" placeholder="Enter your email address" />
           </FormGroup>
 
-          <FormGroup className="mb-3" controlId="formBasicPassword">
+          <FormGroup className="mb-3 password" controlId="formBasicPassword">
             <FormControl type="password" placeholder="Enter your password" />
           </FormGroup>
           <FormGroup className="mb-3" controlId="formBasicCheckbox">
@@ -50,18 +54,18 @@ const start = () => {
           <section>
             <div className="d-grid social-button">
               <Button size="lg">
-                <FcGoogle /> Sign in with Google
+                <FcGoogle /> Sign up with Google
               </Button>
             </div>
             <div className="d-grid social-button">
               <Button size="lg">
                 <FiInstagram />
-                Sign in with Instagram
+                Sign up with Instagram
               </Button>
             </div>
             <div className="form-footer">
-              <p>Don't have an account? </p>
-              <a href="/sign-up">Sign Up</a>
+              <p>Already have an account? </p>
+              <a href="/">Sign In</a>
             </div>
           </section>
         </Form>

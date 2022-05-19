@@ -1,63 +1,101 @@
 .sign-in {
-  width: 100%;
+  // width: 100%;
   display: flex;
-  height: 100vh;
+  height: 120vh;
 }
 .form-section {
-  width: 50%;
-  background-color: #fcfcfc;
-  padding: 2rem;
+  padding: 4rem;
   margin: 0;
   nav {
     display: flex;
     align-items: center;
   }
-  img {
+  .logo {
     width: 25px;
     height: 25px;
     object-fit: contain;
     margin-right: 0.5rem;
   }
-  h4 {
+  .logo-text {
     font-weight: 500;
+    font-size: 1.3rem;
     margin: 0;
+    line-height: 1.5rem;
   }
   header {
     margin-top: 5rem;
     margin-bottom: 2rem;
   }
-  form{
-      margin-top: 1rem;
-      width: 80%;
-  }
-  input{
+  form {
+    margin-top: 1rem;
+    width: 70%;
+    input {
       margin-bottom: 2rem;
       padding: 0.8rem;
-  }
-  input[type='checkbox']{
+    }
+
+    input[type="checkbox"] {
+      padding: 0.2;
       margin-right: 1rem;
-  }
-  button {
-    background-color: #fc8f00;
-    border: #fc8f00;
-    border-radius: 10px;
-    &:hover{
+      &:focus,
+      &:checked {
+        background-color: #fc8f00;
+      }
+    }
+    .d-grid {
+      width: 100%;
+    }
+    .login button {
+      background-color: #fc8f00;
+      border: #fc8f00;
+      border-radius: 10px;
+      &:hover,
+      &:focus {
         border: 1px solid #fcfcfc;
         background-color: #fc8f00;
+      }
+    }
+    .form-footer {
+      display: flex;
+      width: 100%;
+      justify-content: center;
+      a {
+        color: #fc8f00;
+        margin-left: 1rem;
+        text-decoration: none;
+      }
+    }
+  }
+  .alternative {
+    margin-top: 1rem;
+    p {
+      margin: auto 1rem;
+    }
+  }
+  .social-button {
+    margin: 1rem auto;
+    button {
+      color: #5b5b5b;
+      background-color: transparent;
+      border: 2px solid #eeeeee;
+      svg {
+        font-size: 1.6rem;
+        margin-right: 0.7rem;
+        color: #c13584;
+      }
     }
   }
 }
 .ellipse-section {
-  width: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
   background-color: #f9f9f9;
   .blur {
-    bottom: 0px;
     position: absolute;
-    height: 50%;
-    width: 50%;
+    bottom: 0;
+    height: 40vh;
+    width: 40vw;
     background: rgba(245, 245, 245, 0.02);
     backdrop-filter: blur(50px);
   }
@@ -67,6 +105,10 @@
     display: none;
   }
   .form-section {
+    // width: 100%;
+    padding: 3rem;
+    form {
       width: 100%;
+    }
   }
 }
