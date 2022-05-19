@@ -200,8 +200,20 @@ p {
 
 footer {
   background-color: #5B5B5B;
-  padding: 50px 64px 8px;
+  padding: 48px 18px 8px;
   color: #FCFCFC;
+}
+
+@media (min-width: 576px) {
+  footer {
+    padding: 48px 32px 8px;
+  }
+}
+
+@media (min-width: 768px) {
+  footer {
+    padding: 50px 64px 8px;
+  }
 }
 
 footer ul {
