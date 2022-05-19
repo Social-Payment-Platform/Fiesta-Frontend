@@ -1,7 +1,7 @@
 import React from "react";
 import ellipse from "../assets/ellipse.png";
 import { FcGoogle } from "react-icons/fc";
-import { FiInstagram } from "react-icons/fi";
+import { FiInstagram, FiEye } from "react-icons/fi";
 
 import {
   Button,
@@ -10,6 +10,7 @@ import {
   FormCheck,
   FormControl,
   FormGroup,
+  InputGroup,
 } from "react-bootstrap";
 
 const start = () => {
@@ -32,9 +33,12 @@ const start = () => {
             <FormControl type="email" placeholder="Enter your email address" />
           </FormGroup>
 
-          <FormGroup className="mb-3 password" controlId="formBasicPassword">
+          <InputGroup className="mb-3 password" controlId="formBasicPassword">
             <FormControl type="password" placeholder="Enter your password" />
-          </FormGroup>
+            <div className="show-icon">
+              <FiEye />
+            </div>
+          </InputGroup>
           <FormGroup className="mb-3" controlId="formBasicCheckbox">
             <FormCheck type="checkbox" label="Remember me" />
           </FormGroup>
