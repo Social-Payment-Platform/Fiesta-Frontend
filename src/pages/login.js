@@ -11,15 +11,14 @@ import {
   FormGroup,
   InputGroup,
 } from "react-bootstrap";
+import Navbar from '../components/navbar';
 
 const start = () => {
   return (
+    <>
+      <Navbar/>
     <div className="sign-in">
       <Col className="form-section" xs={12} md={6}>
-        <nav>
-          <img src={ellipse} alt="Fiesta" className="logo" />
-          <p className="logo-text">Fiesta</p>
-        </nav>
         <header>
           <h1>Welcome back</h1>
           <p>Please fill in your details to sign in</p>
@@ -75,6 +74,7 @@ const start = () => {
         <div className="blur"></div>
       </Col>
     </div>
+    </>
   );
 };
 

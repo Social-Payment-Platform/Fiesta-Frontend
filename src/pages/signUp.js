@@ -2,7 +2,7 @@ import React from "react";
 import ellipse from "../assets/ellipse.png";
 import { FcGoogle } from "react-icons/fc";
 import { FiInstagram, FiEye } from "react-icons/fi";
-
+import Navbar from '../components/navbar';
 import {
   Button,
   Col,
@@ -15,12 +15,10 @@ import {
 
 const start = () => {
   return (
-    <div className="sign-in">
+    <>
+      <Navbar/>
+      <div className="sign-in">
       <Col className="form-section" xs={12} md={6}>
-        <nav>
-          <img src={ellipse} alt="Fiesta" className="logo" />
-          <p className="logo-text">Fiesta</p>
-        </nav>
         <header>
           <h1>Hello there!</h1>
           <p>Please fill in your details to get started</p>
@@ -79,6 +77,7 @@ const start = () => {
         <div className="blur"></div>
       </Col>
     </div>
+    </>
   );
 };
 
