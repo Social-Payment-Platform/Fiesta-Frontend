@@ -6,7 +6,7 @@ import circle from '../assets/circle.png'
 const footer = () => {
     return (
         <footer>
-            <Row className='g-5'>
+            <Row className='g-4 g-sm-5'>
                 <Col sm={6} lg={4}>
                     <p className='logo'>
                         <img src={circle} alt="logo" className='me-3' />
