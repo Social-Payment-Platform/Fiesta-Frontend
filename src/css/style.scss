@@ -1,4 +1,8 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+@import "../../node_modules/bootstrap/scss/functions";
+@import "../../node_modules/bootstrap/scss/variables";
+@import 'variables';
+@import "../../node_modules/bootstrap/scss/mixins";
 
 body{
     margin:0;
@@ -18,5 +22,17 @@ p{
 button{
     font-size: 1rem !important; 
 }
+.text {
+    &-orange {
+        color: $primary-color;
+    }
+    &-grey {
+        color: $grey-color;
+    }
+}
+
 
 @import 'login';
+@import 'navbar';
+@import 'footer';
+@import 'findProfessional';

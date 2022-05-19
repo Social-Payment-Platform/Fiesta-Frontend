@@ -1,0 +1,124 @@
+.filter-section {
+    padding: 48px 0;
+    color: $dark-color;
+    background-color: $off-white-color;
+
+    @include media-breakpoint-up(lg) {
+        padding: 90px 0 54px;
+    }
+
+    h2 {
+        font-weight: 500;
+        margin-bottom: 22px;
+        font-size: 1.6rem;
+
+        @include media-breakpoint-up(xl) {
+            font-size: 2rem;
+        }
+    }
+
+    .radio {
+        margin-bottom: 12px;
+    }
+
+    .form-check-input:checked {
+        background-color: $primary-color;
+        border-color: $primary-color;
+    }
+
+    .search {
+        &-box {
+            background: $grey-90-color;
+            border: 1px solid $grey-50-color;
+            border-radius: 10px;
+            padding: 9px 25px;
+            color: $grey-color;
+            @include media-breakpoint-up(sm) {
+                padding: 13px 41px;
+            }
+        }
+        &-icon {
+            width: 18px;
+            top: 14px;
+            right: 25px;
+
+            @include media-breakpoint-up(sm) {
+                width: unset;
+                top: 10px;
+                right: 30px;
+            }
+        }
+    }
+
+    p {
+        font-size: 1rem;
+        font-weight: 500;
+    }
+}
+
+.skill-section {
+    background-color: $grey-90-color;
+    padding: 40px 0 60px;
+
+    @include media-breakpoint-up(sm) {
+        padding: 40px 0 121px;
+    }
+
+    .skill-tab {
+        width: fit-content;
+        background: $off-white-color;
+        border: 1px solid $grey-50-color;
+        border-radius: 10px;
+        margin-bottom: 51px;
+        padding: 8px 16px;
+
+        .nav-pills .nav-link {
+            color: $grey-color;
+            padding: 9px 20px;
+            @include media-breakpoint-up(md) {
+                padding: 9px 30px;
+            }
+
+            &.active {
+                background: $dark-color;
+                border-radius: 8px;
+                color: $off-white-color;
+                @include media-breakpoint-up(md) {
+                    padding: 9px 39px;
+                }
+            }
+        }
+    }
+
+    .card {
+        &-custom-gap {
+            --bs-gutter-y: 2.25rem;
+            --bs-gutter-x: 2.25rem
+        }
+        &-body {
+            padding: 24px 18px;
+            @include media-breakpoint-up(md) {
+                padding: 30px 33px 30px 23px;
+            }
+        }
+        &-text {
+            font-size: 0.93rem;
+        }
+        .bookmark-icon {
+            object-fit: none;
+        }
+
+        .badges {
+            margin-top: 21px;
+            .grey-badge {
+                background-color: $grey-50-color;
+                color: $dark-color;
+                padding: 9px 20px;
+                border-radius: 8px;
+                font-size: 0.75rem;
+            }
+        }
+
+    }
+}
+
