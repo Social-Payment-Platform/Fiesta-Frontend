@@ -2,7 +2,7 @@ import React from 'react'
 import { Nav, Container, Navbar } from "react-bootstrap";
 import { NavLink } from "react-router-dom"
 import logo from "../assets/logo.png";
-import profilePicture from "../assets/profile-picture.jpg"
+// import profilePicture from "../assets/profile-picture.jpg"
 
 const navbar = () => {
     
