@@ -28,14 +28,15 @@ button {
 }
 
 .sign-in {
+  background-color: #f9f9f9 !important;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  height: 120vh;
 }
 
 .form-section {
   padding: 4rem;
+  background-color: #fcfcfc;
   margin: 0;
 }
 
@@ -154,19 +155,19 @@ button {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  height: 100vh;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background-color: #f9f9f9;
 }
 
 .ellipse-section .blur {
   position: absolute;
   bottom: 0;
-  height: 40vh;
+  height: 50vh;
   width: 40vw;
   background: rgba(245, 245, 245, 0.02);
   -webkit-backdrop-filter: blur(50px);
@@ -182,6 +183,10 @@ button {
   }
   .form-section form {
     width: 100%;
+  }
+  .form-section form .form-footer {
+    display: block;
+    text-align: center;
   }
 }
 
@@ -353,6 +358,11 @@ footer .footer-copyright {
   margin-bottom: 12px;
 }
 
+.filter-section .form-check label {
+  font-size: 1rem;
+  font-weight: 500;
+}
+
 .filter-section .form-check-input:checked {
   background-color: #FC8F00;
   border-color: #FC8F00;
@@ -386,8 +396,12 @@ footer .footer-copyright {
   }
 }
 
-.filter-section p {
+.filter-section popular {
   font-size: 1rem;
+}
+
+.filter-section orange {
+  font-size: 0.9rem;
   font-weight: 500;
 }
 

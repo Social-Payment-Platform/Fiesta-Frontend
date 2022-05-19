@@ -1,10 +1,12 @@
 .sign-in {
   // width: 100%;
+  background-color: #f9f9f9 !important;
   display: flex;
-  height: 120vh;
+  // height: 120vh;
 }
 .form-section {
   padding: 4rem;
+  background-color: #fcfcfc;
   margin: 0;
   nav {
     display: flex;
@@ -92,15 +94,17 @@
     }
   }
 }
+
 .ellipse-section {
   display: flex;
+  height: 100vh;
   justify-content: center;
   align-items: center;
-  background-color: #f9f9f9;
+
   .blur {
     position: absolute;
     bottom: 0;
-    height: 40vh;
+    height: 50vh;
     width: 40vw;
     background: rgba(245, 245, 245, 0.02);
     backdrop-filter: blur(50px);
@@ -115,6 +119,11 @@
     padding: 3rem;
     form {
       width: 100%;
+      // height: 100vh;
+      .form-footer {
+        display: block;
+        text-align: center;
+      }
     }
   }
 }

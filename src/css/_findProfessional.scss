@@ -20,7 +20,10 @@
     .radio {
         margin-bottom: 12px;
     }
-
+    .form-check label{
+            font-size: 1rem;
+            font-weight: 500;
+        }
     .form-check-input:checked {
         background-color: $primary-color;
         border-color: $primary-color;
@@ -49,9 +52,11 @@
             }
         }
     }
-
-    p {
+    popular{
         font-size: 1rem;
+    }
+    orange {
+        font-size: 0.9rem;
         font-weight: 500;
     }
 }

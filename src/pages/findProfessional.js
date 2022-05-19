@@ -60,8 +60,8 @@ const findProfessional = () => {
                                 <img className="position-absolute search-icon" src={searchIcon} alt="search-icon" />
                             </div>
                             <div>
-                                <p className="fs-5 mb-2">Popular professions:</p>
-                                <p className="text-orange">Baker, DJ, Photographer</p>
+                                <p className="mb-2 popular">Popular professions:</p>
+                                <p className="text-orange orange">Caterer, Event Planner, Photographer..</p>
                             </div>
                         </Col>
                         <Col lg="6">
