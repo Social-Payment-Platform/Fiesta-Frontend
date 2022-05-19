@@ -1,11 +1,11 @@
 import React from "react";
 import Navbar from '../components/navbar';
+import Footer from '../components/footer';
 import { Container, Row, Col, Form, Card, Nav } from "react-bootstrap";
 import searchIcon from "../assets/search-icon.png"
 import profileImage from "../assets/profile-image.jpg"
 import bookmarkIcon from "../assets/bookmark.png"
-import { NavLink } from "react-router-dom";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 const findProfessional = () => {
     const skills = ['Photographer', 'Event Planner', 'Caterer', 'DJ', 'Chef', 'Videographer', 'Bouncer', 'Ushers', 'Baker', 'Decorator']
@@ -133,6 +133,7 @@ const findProfessional = () => {
                     </Row>
                 </Container>
             </div>
+            <Footer />
         </>
     );
 };

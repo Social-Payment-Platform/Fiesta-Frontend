@@ -198,6 +198,60 @@ p {
   }
 }
 
+footer {
+  background-color: #5B5B5B;
+  padding: 50px 64px 8px;
+  color: #FCFCFC;
+}
+
+footer ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+footer p, footer li {
+  font-size: 1rem;
+}
+
+footer li {
+  margin: 16px 0;
+}
+
+footer a {
+  color: #FCFCFC;
+  text-decoration: none;
+}
+
+footer .logo {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+@media (min-width: 576px) {
+  footer .logo {
+    font-size: 1.7rem;
+  }
+}
+
+footer .logo img {
+  width: 30px;
+}
+
+@media (min-width: 576px) {
+  footer .logo img {
+    width: unset;
+  }
+}
+
+footer .footer-col-title {
+  font-weight: 600;
+}
+
+footer .footer-copyright {
+  font-size: 1rem;
+  margin-top: 40px;
+}
+
 .filter-section {
   padding: 48px 0;
   color: #5B5B5B;
