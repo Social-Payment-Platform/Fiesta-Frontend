@@ -1,8 +1,8 @@
-import React from "react";
+import React, { useContext, useState } from "react";
 import ellipse from "../assets/ellipse.png";
 import { FcGoogle } from "react-icons/fc";
 import { ImFacebook2 } from "react-icons/im";
-import { FiEye } from "react-icons/fi";
+import { FiEye, FiEyeOff } from "react-icons/fi";
 import {
   Button,
   Col,
@@ -13,8 +13,58 @@ import {
   InputGroup,
 } from "react-bootstrap";
 import Navbar from '../components/navbar';
+import AuthService from "../services/auth";
+import { useHistory } from "react-router-dom";
+import { Context } from "../context";
 
-const start = () => {
+const userObject = {
+  email: '',
+  password: ''
+}
+
+const LogIn = () => {
+  const [user, setUser] = useState(userObject);
+  const [hidePassword, setHidePassword] = useState(true);
+  const history = useHistory();
+  const { actions } = useContext(Context)
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+
+    setUser({ ...user, [name]: value });
+  }
+
+  const formReset = () => {
+    setUser(userObject)
+  }
+
+  const handleSubmit = async e => {
+    e.preventDefault();
+
+    const { email, password } = user;
+    
+    const isFormValid = !!(
+        email && password
+    ) 
+
+    if (isFormValid) {
+      try {           
+          const response = await AuthService.loginUser({ email, password })
+
+          if (response.status === 200){
+              actions.login(response.data)
+              history.push('/')
+          }
+          formReset()
+      }
+      catch (e) {
+        alert('User does not exist')
+      }
+    } else {
+        alert('Ensure all fields are filled')
+    }
+  }
+
   return (
     <>
       <Navbar/>
@@ -26,20 +76,26 @@ const start = () => {
         </header>
         <Form>
           <FormGroup className="mb-3" controlId="formBasicEmail">
-            <FormControl type="email" placeholder="Enter your email address" />
+            <FormControl type="email" placeholder="Enter your email address" name="email" onChange={handleChange} />
           </FormGroup>
 
           <InputGroup className="mb-3 password" controlId="formBasicPassword">
-            <FormControl type="password" placeholder="Enter your password" />
-            <div className="show-icon">
-              <FiEye />
+            <FormControl type={ hidePassword ? "password" : "text" } placeholder="Enter your password" name="password" onChange={handleChange} />
+            <div className="show-icon" onClick={() => setHidePassword(!hidePassword)}>
+              {
+                  hidePassword 
+                ?
+                  <FiEye />
+                :
+                  <FiEyeOff />
+              }
             </div>
           </InputGroup>
           <FormGroup className="mb-3" controlId="formBasicCheckbox">
             <FormCheck type="checkbox" label="Remember me" />
           </FormGroup>
           <div className="d-grid login">
-            <Button size="lg">Sign in</Button>
+            <Button size="lg" onClick={handleSubmit}>Sign in</Button>
           </div>
 
           <div className="d-flex alternative">
@@ -79,4 +135,4 @@ const start = () => {
   );
 };
 
-export default start;
+export default LogIn;
