@@ -3,6 +3,7 @@ import { BrowserRouter, Switch, Route } from "react-router-dom";
 import Login from './pages/login'
 import SignUp from './pages/signUp'
 import Home from './pages/home'
+import Profile from './pages/profile'
 import FindProfessional from './pages/findProfessional'
 import Provider from "./context";
 import 'bootstrap/dist/css/bootstrap.min.css';
