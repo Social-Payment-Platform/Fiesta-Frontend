@@ -56,7 +56,7 @@ button {
 .home .FiestaBio h1 {
   font-size: 3rem !important;
   font-weight: 600;
-  color: #5B5B5B;
+  color: #5b5b5b;
 }
 
 @media (min-width: 576px) {
@@ -69,7 +69,7 @@ button {
   margin: 2rem 0;
   font-size: 1.5rem;
   font-weight: 500;
-  color: #9D9D9D;
+  color: #9d9d9d;
 }
 
 .home .FiestaBio .getStarted {
@@ -283,6 +283,142 @@ button {
   }
   .form-section form .form-footer {
     display: block;
+    text-align: center;
+  }
+}
+
+.profile {
+  color: #5b5b5b;
+  margin-top: 2rem;
+}
+
+.profile h1 {
+  font-size: 3rem !important;
+  font-weight: 600;
+  color: #5b5b5b;
+}
+
+.profile svg {
+  font-size: 1.4rem;
+  color: #fc8f00;
+}
+
+.profile button {
+  background-color: #fc8f00;
+  border: #fc8f00;
+  border-radius: 10px;
+}
+
+.profile button:hover, .profile button:focus {
+  border: 1px solid #fcfcfc;
+  background-color: #fc8f00;
+}
+
+.banner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.banner img {
+  width: 23vw;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.slider {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.slider .carousel {
+  width: 45%;
+}
+
+.bio-section {
+  overflow-wrap: break-word;
+  font-weight: 400;
+}
+
+.card-section {
+  width: 45%;
+  border: 2px solid #eeeeee;
+  padding: 1rem;
+  border-radius: 8px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.card-section .card-details {
+  width: 65%;
+  overflow-wrap: break-word;
+}
+
+.card-section svg {
+  font-size: 3rem;
+  color: #5b5b5b;
+  border: 3px solid #5b5b5b;
+  border-radius: 50%;
+}
+
+.card-section button {
+  background-color: #fc8f00;
+  border: #fc8f00;
+  padding: 0.8rem;
+  border-radius: 10px;
+}
+
+.card-section button:hover, .card-section button:focus {
+  border: 1px solid #fcfcfc;
+  background-color: #fc8f00;
+}
+
+.cards {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 2rem;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+@media only screen and (max-width: 768px) {
+  .cards,
+  .slider,
+  .banner {
+    display: block;
+  }
+  .carousel {
+    width: 100% !important;
+    margin-bottom: 2rem;
+  }
+  .card-section {
+    width: 100%;
+    margin-bottom: 2rem;
+  }
+  .card-section svg {
+    font-size: 2rem;
+  }
+  .card-section button {
+    padding: 0;
+  }
+  .bio-section {
+    width: 100% !important;
+  }
+  .banner div {
+    margin-bottom: 2rem;
     text-align: center;
   }
 }

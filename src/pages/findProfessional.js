@@ -122,7 +122,7 @@ const findProfessional = () => {
                                                 <span className="grey-badge me-3 me-lg-4">{business.skill}</span>
                                                 <span className="grey-badge">{business.state}, {business.country}</span>
                                             </div>
-                                            <Link to='#' className="text-orange text-decoration-none">View Profile</Link>
+                                            <Link to='/user/profile' className="text-orange text-decoration-none">View Profile</Link>
                                         </div>
                                     </Card.Body>
                                 </Card>

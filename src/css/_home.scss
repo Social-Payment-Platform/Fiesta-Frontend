@@ -1,74 +1,73 @@
-.home{
-    display: block;
-margin: 1rem;
-padding:1rem;
-@include media-breakpoint-up(sm) {
-    display: flex;
-    margin: 2rem 1rem 2rem 0;
-}
-.FiestaBio{
+.home {
+  display: block;
+  margin: 1rem;
+  padding: 1rem;
+    @include media-breakpoint-up(sm) {
+        display: flex;
+        margin: 2rem 1rem 2rem 0;
+    }
+  .FiestaBio {
     width: 100%;
 
     @include media-breakpoint-up(sm) {
-        width: 55vw;
-    padding: 2.5rem;
+      width: 55vw;
+      padding: 2.5rem;
     }
-  
-    h1{
-        font-size: 3rem !important;
-        font-weight: 600;
-        color: #5B5B5B;
-        @include media-breakpoint-up(sm) {
-            font-size: 4rem !important;
-        }
+
+    h1 {
+      font-size: 3rem !important;
+      font-weight: 600;
+      color: #5b5b5b;
+      @include media-breakpoint-up(sm) {
+        font-size: 4rem !important;
+      }
     }
-    p{
-        margin: 2rem 0;
+    p {
+      margin: 2rem 0;
+      font-size: 1.5rem;
+      font-weight: 500;
+      color: #9d9d9d;
+    }
+    .getStarted {
+      width: 50%;
+      margin-top: 1rem;
+      text-align: center;
+      @include media-breakpoint-up(sm) {
+        width: 30%;
+      }
+      button {
+        background-color: #fc8f00;
+        border: #fc8f00;
         font-size: 1.5rem;
         font-weight: 500;
-        color: #9D9D9D;
-       
-    }
-    .getStarted{
-        width: 50%;
-        margin-top: 1rem;
-        text-align: center;
-        @include media-breakpoint-up(sm) {
-            width: 30%;
+        padding: 1rem 3rem;
+        border-radius: 10px;
+        &:hover,
+        &:focus {
+          border: 1px solid #fcfcfc;
+          background-color: #fc8f00;
         }
-        button{
-            background-color: #fc8f00;
-            border: #fc8f00;
-            font-size: 1.5rem;
-            font-weight: 500;
-            padding: 1rem 3rem;
-            border-radius: 10px;
-            &:hover,
-            &:focus {
-              border: 1px solid #fcfcfc;
-              background-color: #fc8f00;
-            }
-        }
+      }
     }
-}
-.heroImageSection{
+  }
+  .heroImageSection {
     display: none;
-    
+
     @include media-breakpoint-up(sm) {
-        display: block;
-        width: 45vw;
+      display: block;
+      width: 45vw;
     }
-    img{
-        width: 100%;
-        object-fit: contain;
+    img {
+      width: 100%;
+      object-fit: contain;
     }
-}
+  }
 }
 @media only screen and (max-width: 768px) {
-    .FiestaBio{
-        width: 100% !important;
-    }
-    .heroImageSection{
-        display: none !important;
-    }
+  .FiestaBio {
+    width: 100% !important;
+  }
+  .heroImageSection {
+    display: none !important;
+  }
 }
