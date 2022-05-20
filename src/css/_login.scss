@@ -25,7 +25,7 @@
     line-height: 1.5rem;
   }
   header {
-    margin-top: 3rem;
+    margin-top: 5rem;
     margin-bottom: 2rem;
   }
   form {
@@ -89,7 +89,7 @@
       svg {
         font-size: 1.6rem;
         margin-right: 0.7rem;
-        color: #c13584;
+        color: #4267B2;
       }
     }
   }
@@ -104,7 +104,7 @@
   .blur {
     position: absolute;
     bottom: 0;
-    height: 35vh;
+    height: 40vh;
     width: 40vw;
     background: rgba(245, 245, 245, 0.02);
     backdrop-filter: blur(50px);

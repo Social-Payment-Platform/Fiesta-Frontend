@@ -27,6 +27,103 @@ button {
   color: #9D9D9D;
 }
 
+.home {
+  display: block;
+  margin: 1rem;
+  padding: 1rem;
+}
+
+@media (min-width: 576px) {
+  .home {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin: 2rem 1rem 2rem 0;
+  }
+}
+
+.home .FiestaBio {
+  width: 100%;
+}
+
+@media (min-width: 576px) {
+  .home .FiestaBio {
+    width: 55vw;
+    padding: 2.5rem;
+  }
+}
+
+.home .FiestaBio h1 {
+  font-size: 3rem !important;
+  font-weight: 600;
+  color: #5B5B5B;
+}
+
+@media (min-width: 576px) {
+  .home .FiestaBio h1 {
+    font-size: 4rem !important;
+  }
+}
+
+.home .FiestaBio p {
+  margin: 2rem 0;
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: #9D9D9D;
+}
+
+.home .FiestaBio .getStarted {
+  width: 50%;
+  margin-top: 1rem;
+  text-align: center;
+}
+
+@media (min-width: 576px) {
+  .home .FiestaBio .getStarted {
+    width: 30%;
+  }
+}
+
+.home .FiestaBio .getStarted button {
+  background-color: #fc8f00;
+  border: #fc8f00;
+  font-size: 1.5rem;
+  font-weight: 500;
+  padding: 1rem 3rem;
+  border-radius: 10px;
+}
+
+.home .FiestaBio .getStarted button:hover, .home .FiestaBio .getStarted button:focus {
+  border: 1px solid #fcfcfc;
+  background-color: #fc8f00;
+}
+
+.home .heroImageSection {
+  display: none;
+}
+
+@media (min-width: 576px) {
+  .home .heroImageSection {
+    display: block;
+    width: 45vw;
+  }
+}
+
+.home .heroImageSection img {
+  width: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+@media only screen and (max-width: 768px) {
+  .FiestaBio {
+    width: 100% !important;
+  }
+  .heroImageSection {
+    display: none !important;
+  }
+}
+
 .sign-in {
   background-color: #f9f9f9 !important;
   display: -webkit-box;
@@ -65,7 +162,7 @@ button {
 }
 
 .form-section header {
-  margin-top: 3rem;
+  margin-top: 5rem;
   margin-bottom: 2rem;
 }
 
@@ -148,7 +245,7 @@ button {
 .form-section .social-button button svg {
   font-size: 1.6rem;
   margin-right: 0.7rem;
-  color: #c13584;
+  color: #4267B2;
 }
 
 .ellipse-section {
@@ -167,7 +264,7 @@ button {
 .ellipse-section .blur {
   position: absolute;
   bottom: 0;
-  height: 35vh;
+  height: 40vh;
   width: 40vw;
   background: rgba(245, 245, 245, 0.02);
   -webkit-backdrop-filter: blur(50px);
