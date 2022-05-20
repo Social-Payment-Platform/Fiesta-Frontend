@@ -1,10 +1,12 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { Nav, Container, Navbar } from "react-bootstrap";
 import { NavLink } from "react-router-dom"
 import logo from "../assets/logo.png";
-// import profilePicture from "../assets/profile-picture.jpg"
+import { Context } from '../context';
+import profilePicture from "../assets/profile-picture.jpg"
 
-const navbar = () => {
+const NavbarComponent = () => {
+    const { user, userDetails } = useContext(Context)
     
     return (
         <Navbar collapseOnSelect expand="lg">
@@ -22,18 +24,27 @@ const navbar = () => {
                         <NavLink className="px-lg-4 nav-link" to="/list-business">
                             List Business
                         </NavLink>
-                        {/* if not logged in */}
-                        <NavLink className="px-lg-4 nav-link" to="/sign-in">Sign in</NavLink>
-                        <NavLink className="px-lg-4 nav-link sign-up" to="/sign-up">Sign up</NavLink>
-                        {/* if logged in */}
-                        {/* <div className='d-lg-none'>
-                            <img src={profilePicture} alt="profile picture" className='profile-picture' />
-                            <span className='text-grey'>Jeffery</span>
-                        </div>
-                        <div className='d-none d-lg-block'>
-                            <span className='text-grey'>Jeffery</span>
-                            <img src={profilePicture} alt="profile picture" className='profile-picture' />
-                        </div> */}
+                        {
+                                user
+                            ?
+                                // if logged in
+                                <>
+                                    <div className='d-lg-none'>
+                                        <img src={profilePicture} alt="profile" className='profile-picture' />
+                                        <span className='text-grey text-capitalize'>{userDetails.username}</span>
+                                    </div>
+                                    <div className='d-none d-lg-block'>
+                                        <span className='text-grey text-capitalize'>{userDetails.username}</span>
+                                        <img src={profilePicture} alt="profile" className='profile-picture' />
+                                    </div>
+                                </>
+                            :
+                                // if not logged in
+                                <>
+                                    <NavLink className="px-lg-4 nav-link" to="/sign-in">Sign in</NavLink>
+                                    <NavLink className="px-lg-4 nav-link sign-up" to="/sign-up">Sign up</NavLink>
+                                </>
+                        }
                     </Nav>
                 </Navbar.Collapse>
             </Container>
@@ -41,4 +52,4 @@ const navbar = () => {
     )
 }
 
-export default navbar
+export default NavbarComponent
