@@ -82,12 +82,19 @@ const SignUp = () => {
     <>
       <Navbar/>
       <div className="sign-in">
-      <Col className="form-section" xs={12} md={6}>
+        <Col className="form-section" xs={12} md={6}>
+            
         <header>
           <h1>Hello there!</h1>
           <p>Please fill in your details to get started</p>
         </header>
-        <Form>
+          <Form>
+          <div className="d-grid social-button">
+              <Button size="lg">
+                <ImFacebook2  />
+                Sign up with Facebook
+              </Button>
+            </div>
           <FormGroup className="mb-3" controlId="username">
             <FormControl type="text" placeholder="Enter your username" name="username" onChange={handleChange} />
           </FormGroup>
@@ -113,7 +120,7 @@ const SignUp = () => {
           <div className="d-grid login">
             <Button size="lg" onClick={handleSubmit}>Sign up</Button>
           </div>
-
+{/* 
           <div className="d-flex alternative">
             <span style={{ width: "50%" }}>
               <hr />
@@ -122,24 +129,12 @@ const SignUp = () => {
             <span style={{ width: "50%" }}>
               <hr />
             </span>
-          </div>
-          <section>
-            <div className="d-grid social-button">
-              <Button size="lg">
-                <FcGoogle /> Sign up with Google
-              </Button>
-            </div>
-            <div className="d-grid social-button">
-              <Button size="lg">
-                <ImFacebook2  />
-                Sign up with Facebook
-              </Button>
-            </div>
-            <div className="form-footer">
+            </div> */}
+            
+            <div className="form-footer mt-3">
               <p>Already have an account? </p>
               <a href="/">Sign In</a>
             </div>
-          </section>
         </Form>
       </Col>
       <Col className="ellipse-section" xs={0} md={6}>

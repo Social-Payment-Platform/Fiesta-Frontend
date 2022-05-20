@@ -18,6 +18,7 @@ function App() {
             <Route path="/" exact component={Home} />
             <Route path="/sign-in" component={Login} />
             <Route path="/sign-up" component={SignUp} />
+            <Route path="/user/profile" component={Profile} />
             <Route path="/find-professional" component={FindProfessional} />
           </Switch>
         </Provider>

@@ -74,7 +74,13 @@ const LogIn = () => {
           <h1>Welcome back</h1>
           <p>Please fill in your details to sign in</p>
         </header>
-        <Form>
+          <Form>
+          <div className="d-grid social-button">
+              <Button size="lg">
+                <ImFacebook2 />
+                Sign in with Facebook
+              </Button>
+            </div>
           <FormGroup className="mb-3" controlId="formBasicEmail">
             <FormControl type="email" placeholder="Enter your email address" name="email" onChange={handleChange} />
           </FormGroup>
@@ -97,7 +103,7 @@ const LogIn = () => {
           <div className="d-grid login">
             <Button size="lg" onClick={handleSubmit}>Sign in</Button>
           </div>
-
+{/* 
           <div className="d-flex alternative">
             <span style={{ width: "50%" }}>
               <hr />
@@ -106,24 +112,11 @@ const LogIn = () => {
             <span style={{ width: "50%" }}>
               <hr />
             </span>
-          </div>
-          <section>
-            <div className="d-grid social-button">
-              <Button size="lg">
-                <FcGoogle /> Sign in with Google
-              </Button>
-            </div>
-            <div className="d-grid social-button">
-              <Button size="lg">
-                <ImFacebook2 />
-                Sign in with Facebook
-              </Button>
-            </div>
-            <div className="form-footer">
+          </div> */}
+            <div className="form-footer mt-3">
               <p>Don't have an account? </p>
               <a href="/sign-up">Sign Up</a>
             </div>
-          </section>
         </Form>
       </Col>
       <Col className="ellipse-section" xs={0} md={6}>
