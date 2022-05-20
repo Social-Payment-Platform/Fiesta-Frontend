@@ -108,7 +108,7 @@ const SignUp = () => {
             </div>
           </InputGroup>
           <FormGroup className="mb-3" controlId="formBasicCheckbox">
-            <FormCheck type="checkbox" label="Remember me" name="agree" onChange={handleChange} />
+            <FormCheck type="checkbox" label="I agree to the terms and conditions" name="agree" onChange={handleChange} />
           </FormGroup>
           <div className="d-grid login">
             <Button size="lg" onClick={handleSubmit}>Sign up</Button>
