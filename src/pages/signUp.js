@@ -1,7 +1,8 @@
 import React from "react";
 import ellipse from "../assets/ellipse.png";
 import { FcGoogle } from "react-icons/fc";
-import { FiInstagram, FiEye } from "react-icons/fi";
+import { ImFacebook2 } from "react-icons/im";
+import { FiEye } from "react-icons/fi";
 import Navbar from '../components/navbar';
 import {
   Button,
@@ -61,8 +62,8 @@ const start = () => {
             </div>
             <div className="d-grid social-button">
               <Button size="lg">
-                <FiInstagram />
-                Sign up with Instagram
+                <ImFacebook2  />
+                Sign up with Facebook
               </Button>
             </div>
             <div className="form-footer">

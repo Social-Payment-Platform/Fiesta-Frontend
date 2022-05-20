@@ -8,7 +8,7 @@ import bookmarkIcon from "../assets/bookmark.png"
 import { Link } from "react-router-dom";
 
 const findProfessional = () => {
-    const skills = ['Photographer', 'Event Planner', 'Caterer', 'DJ', 'Chef', 'Videographer', 'Bouncer', 'Ushers', 'Baker', 'Decorator']
+    const skills = ['Photographer', 'Event Planner', 'Caterer', 'DJ', 'Chef', 'Decorator', 'Bouncer', 'Ushers', 'Baker']
      const businesses = [
         {
             id: 1,
