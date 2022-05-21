@@ -21,9 +21,9 @@ const NavbarComponent = () => {
                         <NavLink className="px-lg-4 nav-link" to="/find-professional">
                             Find Professional
                         </NavLink>
-                        <NavLink className="px-lg-4 nav-link" to="/list-business">
+                        {/* <NavLink className="px-lg-4 nav-link" to="/list-business">
                             List Business
-                        </NavLink>
+                        </NavLink> */}
                         {
                                 user
                             ?

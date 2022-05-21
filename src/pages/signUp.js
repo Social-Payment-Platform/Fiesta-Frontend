@@ -92,7 +92,7 @@ const SignUp = () => {
 				<Form>
 					<div className="d-grid social-button">
 						<a href="https://www.facebook.com/v13.0/dialog/oauth?auth_type=rerequest&client_id=736688330797060&display=popup&redirect_uri=https%3A%2F%2Ffiesta-api.onrender.com%2Fuser%2Foauth-redirect&response_type=code&scope=email%2Cuser_friends" className="btn btn-primary btn-lg">
-							<span className="d-flex align-items-center justify-content-center">
+							<span className="d-flex align-items-center justify-content-center fs-5">
 								<ImFacebook2 className="me-2" />
 								Sign up with Facebook
 							</span>

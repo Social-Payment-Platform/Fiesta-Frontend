@@ -4,6 +4,9 @@ import Footer from '../components/footer';
 import { Container, Row, Col, Form, Card, Nav } from "react-bootstrap";
 import searchIcon from "../assets/search-icon.png"
 import profileImage from "../assets/professional.jpg"
+import seller1 from "../assets/seller1.png"
+import seller2 from "../assets/seller2.png"
+import seller3 from "../assets/seller3.png"
 import bookmarkIcon from "../assets/bookmark.png"
 import { Link } from "react-router-dom";
 
@@ -12,39 +15,39 @@ const FindProfessional = () => {
      const businesses = [
         {
             id: 1,
-            name: 'John Doe',
+            name: 'Mary Jane',
             skill: 'Photography',
             state: 'Lagos',
             country: 'Nigeria',
             profileImage: profileImage,
-            description: 'My name is John, i come across as a down to earth yet highly skilled photoghapher..'
+            description: 'My name is Mary, i come across as a down to earth yet highly skilled photoghapher..'
         },
         {
             id: 2,
-            name: 'John Doe',
+            name: 'Chidinma Obi',
             skill: 'Photography',
             state: 'Lagos',
             country: 'Nigeria',
-            profileImage: profileImage,
-            description: 'My name is John, i come across as a down to earth yet highly skilled photoghapher..'
+            profileImage: seller3,
+            description: 'My name is Chidinma, i come across as a down to earth yet highly skilled customier..'
         },
         {
             id: 3,
-            name: 'John Doe',
+            name: 'Felicia Akande',
             skill: 'Photography',
             state: 'Lagos',
             country: 'Nigeria',
-            profileImage: profileImage,
-            description: 'My name is John, i come across as a down to earth yet highly skilled photoghapher..'
+            profileImage: seller1,
+            description: 'My name is Felicia, i come across as a down to earth yet highly skilled artist..'
         },
         {
             id: 4,
-            name: 'John Doe',
+            name: 'Timi Phillips ',
             skill: 'Photography',
             state: 'Lagos',
             country: 'Nigeria',
-            profileImage: profileImage,
-            description: 'My name is John, i come across as a down to earth yet highly skilled photoghapher..'
+            profileImage: seller2,
+            description: 'My name is Timi, i come across as a down to earth yet highly skilled event planner..'
         }
      ]
 
