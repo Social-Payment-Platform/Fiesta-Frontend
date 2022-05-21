@@ -5,7 +5,7 @@ const PaymentSuccessful = () => {
     useEffect(() => {
         setTimeout(() => {
             window.close()
-        }, 5000)
+        }, 2000)
     })
     return (
         <div class="text-center me-3 ms-3 mt-5 pt-5">
