@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import ellipse from "../assets/ellipse.png";
 import { ImFacebook2 } from "react-icons/im";
 import { FiEye, FiEyeOff } from "react-icons/fi";
@@ -26,6 +26,11 @@ const LogIn = () => {
   const [hidePassword, setHidePassword] = useState(true);
   const history = useHistory();
   const { actions } = useContext(Context)
+
+  useEffect(() =>{
+		window.scrollTo(0, 0)
+		return () => { formReset() }
+	}, [])
 
   const handleChange = (e) => {
 	const { name, value } = e.target;

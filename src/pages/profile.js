@@ -4,34 +4,35 @@ import Footer from "../components/footer";
 import Card from "../components/card";
 import { AiOutlineStar, AiOutlineMail } from "react-icons/ai";
 import { GoLocation } from "react-icons/go";
-import profileImage from "../assets/profile-image.jpg";
-import Carousel from "../components/carousel";
-import social1 from "../assets/social1.png";
-import social2 from "../assets/social2.png";
-import social3 from "../assets/social3.png";
-import random1 from "../assets/random1.png";
-import random2 from "../assets/random2.png";
-import random3 from "../assets/random3.jpg";
 import { Button, Col, Container, Row } from "react-bootstrap";
+import profileImage from "../assets/profile-image.jpg"
+import Carousel from '../components/carousel';
+import social1 from '../assets/social1.png';
+import social2 from '../assets/social2.jpg'
+import social3 from '../assets/social3.jpg'
+import random1 from '../assets/random1.jpg'
+import random2 from '../assets/random2.png'
+import random3 from '../assets/random3.jpg'
+import { Button, Col, Container, Row } from 'react-bootstrap';
+// import { Context } from '../context';
+// import credo from '../services/config';
+// import { appBaseUrl } from '../helpers/variables';
 
 const categories = [
   {
-    price: "100,000",
-    description:
-      "This package involves an unlimited access to pictures to a number of 3 people and change of wears based on users choice",
-    category: "Premium",
+    price: 100000,
+    description: "This package involves an unlimited access to pictures to a number of 3 people and change of wears based on users choice",
+    category: "Premium"
   },
   {
-    price: "75,000",
-    description:
-      "This package involves an unlimited access to pictures to a number of 3 people and change of wears based on users choice",
-    category: "Standard",
+    price: 75000,
+    description: "This package involves an unlimited access to pictures to a number of 3 people and change of wears based on users choice",
+    category: "Standard"
   },
   {
-    price: "50,000",
-    description:
-      "This package involves an unlimited access to pictures to a number of 3 people and change of wears based on users choice",
-    category: "Medium",
+    price: 50000,
+    description: "This package involves an unlimited access to pictures to a number of 3 people and change of wears based on users choice",
+    category: "Medium"
   },
   {
     price: "custom",
@@ -41,7 +42,27 @@ const categories = [
   },
 ];
 
-const profilePage = () => {
+const ProfilePage = () => {
+  // const { userDetails } = useContext(Context)
+
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [])
+
+  // const handlePayment = (amount) => {
+  //   console.log('i am working')
+  //   // credo.initiatePayments({
+  //   //   "amount": amount,
+  //   //   "currency": "NGN",
+  //   //   "redirectUrl": `${ appBaseUrl }/payment-successful`,
+  //   //   "transRef": "iy67f64hvc63",
+  //   //   "paymentOptions": "CARD,BANK",
+  //   //   "customerEmail": userDetails.email,
+  //   //   "customerName": userDetails.username,
+  //   //   "customerPhoneNo": "+2348066282658"
+  //   // });
+  // }
+  
   return (
     <>
       <Navbar />
@@ -84,20 +105,24 @@ const profilePage = () => {
             whether of animals, people or objects.
           </p>
         </section>
-        <section className="services mb-5">
-          <h3 className="mb-3">Services</h3>
-          <Row xs={1} md={2} className="cards card-custom-gap">
-            {categories.map((category, index) => {
-              return (
-                <Col key={index}>
-                  <Card
-                    price={category.price}
-                    details={category.description}
-                    track={category.category}
-                  />
-                </Col>
-              );
-            })}
+        <section className='services mb-5'>
+          <h3 className='mb-3'>Services</h3>
+          <Row xs={1} md={2} className='cards card-custom-gap'>
+            {
+              categories.map((category, index) => {
+                return (
+                  <Col key={index}>
+                    <Card
+                      price={category.price}
+                      details={category.description}
+                      track={category.category}
+                      // handleClick={() => handlePayment(category.price)}
+                    />
+                  </Col>
+                )
+              })
+            }
+
           </Row>
         </section>
         <section className="projects mb-5">
@@ -129,4 +154,4 @@ const profilePage = () => {
   );
 };
 
-export default profilePage;
+export default ProfilePage
