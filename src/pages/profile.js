@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Navbar from "../components/navbar";
 import Footer from "../components/footer";
 import Card from "../components/card";
@@ -13,7 +13,6 @@ import social3 from '../assets/social3.jpg'
 import random1 from '../assets/random1.jpg'
 import random2 from '../assets/random2.png'
 import random3 from '../assets/random3.jpg'
-import { Button, Col, Container, Row } from 'react-bootstrap';
 // import { Context } from '../context';
 // import credo from '../services/config';
 // import { appBaseUrl } from '../helpers/variables';
