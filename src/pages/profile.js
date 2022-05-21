@@ -12,7 +12,7 @@ import social2 from '../assets/social2.png'
 import social3 from '../assets/social3.png'
 import random1 from '../assets/random1.png'
 import random2 from '../assets/random2.png'
-import random3 from '../assets/random3.jpg'
+import random3 from '../assets/random3.png'
 // import { Context } from '../context';
 // import credo from '../services/config';
 // import { appBaseUrl } from '../helpers/variables';
