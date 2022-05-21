@@ -1,4 +1,4 @@
-import React from 'react';
+import { useEffect } from 'react';
 import Navbar from '../components/navbar';
 import Footer from '../components/footer';
 import Card from '../components/card'
@@ -13,20 +13,23 @@ import random1 from '../assets/random1.jpg'
 import random2 from '../assets/random2.png'
 import random3 from '../assets/random3.jpg'
 import { Button, Col, Container, Row } from 'react-bootstrap';
+// import { Context } from '../context';
+// import credo from '../services/config';
+// import { appBaseUrl } from '../helpers/variables';
 
 const categories = [
   {
-    price: '100,000',
+    price: 100000,
     description: "This package involves an unlimited access to pictures to a number of 3 people and change of wears based on users choice",
     category: "Premium"
   },
   {
-    price: '75,000',
+    price: 75000,
     description: "This package involves an unlimited access to pictures to a number of 3 people and change of wears based on users choice",
     category: "Standard"
   },
   {
-    price: '50,000',
+    price: 50000,
     description: "This package involves an unlimited access to pictures to a number of 3 people and change of wears based on users choice",
     category: "Medium"
   },
@@ -37,7 +40,26 @@ const categories = [
   }
 ]
 
-const profilePage = () => {
+const ProfilePage = () => {
+  // const { userDetails } = useContext(Context)
+
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [])
+
+  // const handlePayment = (amount) => {
+  //   console.log('i am working')
+  //   // credo.initiatePayments({
+  //   //   "amount": amount,
+  //   //   "currency": "NGN",
+  //   //   "redirectUrl": `${ appBaseUrl }/payment-successful`,
+  //   //   "transRef": "iy67f64hvc63",
+  //   //   "paymentOptions": "CARD,BANK",
+  //   //   "customerEmail": userDetails.email,
+  //   //   "customerName": userDetails.username,
+  //   //   "customerPhoneNo": "+2348066282658"
+  //   // });
+  // }
   
   return (
     <>
@@ -81,6 +103,7 @@ const profilePage = () => {
                       price={category.price}
                       details={category.description}
                       track={category.category}
+                      // handleClick={() => handlePayment(category.price)}
                     />
                   </Col>
                 )
@@ -112,4 +135,4 @@ const profilePage = () => {
   )
 }
 
-export default profilePage
+export default ProfilePage
