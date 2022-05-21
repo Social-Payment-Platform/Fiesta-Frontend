@@ -346,12 +346,18 @@ button {
 }
 
 .slider .carousel {
-  width: 45%;
+  width: 40%;
 }
 
 .bio-section {
   overflow-wrap: break-word;
   font-weight: 400;
+}
+
+.carousel-control-prev-icon, .carousel-control-next-icon {
+  background-color: #fc8f00;
+  border: 4px solid #fc8f00;
+  border-radius: 50%;
 }
 
 .card-section {
@@ -406,7 +412,6 @@ button {
   }
   .carousel {
     width: 100% !important;
-    margin-bottom: 2rem;
   }
   .card-section {
     width: 100%;
@@ -535,6 +540,12 @@ footer li {
 footer a {
   color: #FCFCFC;
   text-decoration: none;
+}
+
+footer a:hover {
+  color: #FCFCFC;
+  text-decoration: none;
+  opacity: 0.8;
 }
 
 footer .logo {
