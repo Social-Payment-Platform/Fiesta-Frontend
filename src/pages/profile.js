@@ -46,7 +46,6 @@ const ProfilePage = () => {
   }, [])
 
   const handlePayment = async amount => {
-    console.log('i am working')
     try {
       const response = await Payment.makePayment({ 
         phone: '+2341989289253',
@@ -55,7 +54,7 @@ const ProfilePage = () => {
       })
       if (response.status === 200) {
         let params = `scrollbars=no,resizable=no,status=no,location=no,toolbar=no,menubar=no,
-        width=600,height=300,left=100,top=100`;
+        width=800,height=700,left=300,top=200`;
 
         window.open(response.data.paymentLink, 'Pay Fiesta', params);
       }

@@ -5,6 +5,7 @@ import SignUp from './pages/signUp'
 import Home from './pages/home'
 import Profile from './pages/profile'
 import FindProfessional from './pages/findProfessional'
+import PaymentSuccessful from './pages/paymentSuccessful'
 import Provider from "./context";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './css/style.css';
@@ -20,6 +21,7 @@ function App() {
             <Route path="/sign-up" component={SignUp} />
             <Route path="/user/profile" component={Profile} />
             <Route path="/find-professional" component={FindProfessional} />
+            <Route path="/payment-successful" component={PaymentSuccessful} />
           </Switch>
         </Provider>
       </React.StrictMode>
