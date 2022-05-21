@@ -1,11 +1,15 @@
 import { Button } from "react-bootstrap";
-import React from "react";
+import React, { useEffect } from "react";
 import Navbar from '../components/navbar';
 import Footer from '../components/footer';
 import heroImage from "../assets/herosection.png";
 import { Link } from "react-router-dom";
 
-const home = () => {
+const Home = () => {
+
+    useEffect(() => {
+        window.scrollTo(0, 0)
+    }, [])
 
     return (
         <>
@@ -29,4 +33,4 @@ const home = () => {
     );
 };
 
-export default home;
+export default Home;

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Navbar from '../components/navbar';
 import Footer from '../components/footer';
 import { Container, Row, Col, Form, Card, Nav } from "react-bootstrap";
@@ -7,7 +7,7 @@ import profileImage from "../assets/professional.jpg"
 import bookmarkIcon from "../assets/bookmark.png"
 import { Link } from "react-router-dom";
 
-const findProfessional = () => {
+const FindProfessional = () => {
     const skills = ['Photographer', 'Event Planner', 'Caterer', 'DJ', 'Chef', 'Decorator', 'Bouncer', 'Ushers', 'Baker']
      const businesses = [
         {
@@ -47,6 +47,11 @@ const findProfessional = () => {
             description: 'My name is John, i come across as a down to earth yet highly skilled photoghapher..'
         }
      ]
+
+    useEffect(() => {
+        window.scrollTo(0, 0)
+    }, [])
+
     return (
         <>
             <Navbar />
@@ -136,4 +141,4 @@ const findProfessional = () => {
     );
 };
 
-export default findProfessional;
+export default FindProfessional;
