@@ -3,7 +3,7 @@ import Navbar from '../components/navbar';
 import Footer from '../components/footer';
 import { Container, Row, Col, Form, Card, Nav } from "react-bootstrap";
 import searchIcon from "../assets/search-icon.png"
-import profileImage from "../assets/profile-image.jpg"
+import profileImage from "../assets/professional.jpg"
 import bookmarkIcon from "../assets/bookmark.png"
 import { Link } from "react-router-dom";
 
