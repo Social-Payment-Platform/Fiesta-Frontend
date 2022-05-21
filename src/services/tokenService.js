@@ -3,7 +3,7 @@ import Cookies from 'js-cookie'
 import { authenticatedUser, userDetails } from '../helpers/variables'
 
 const TokenService = () => {
-    const getTokens = () => {
+    const getToken = () => {
         if (Cookies.get(authenticatedUser)) {
             const user = JSON.parse(Cookies.get(authenticatedUser))
             return user
@@ -31,7 +31,7 @@ const TokenService = () => {
     }
 
     return {
-        getTokens,
+        getToken,
         getUserDetails,
         setToken,
         removeToken

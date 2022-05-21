@@ -389,6 +389,10 @@ button {
   background-color: #fc8f00;
 }
 
+.card-section button.btn:disabled {
+  background-color: gray;
+}
+
 .cards {
   display: -webkit-box;
   display: -ms-flexbox;

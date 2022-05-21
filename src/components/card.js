@@ -3,7 +3,7 @@ import React from "react";
 import { AiFillStar } from "react-icons/ai";
 import { naira } from "../helpers/variables";
 
-const Card = ({ track, price, details }) => {
+const Card = ({ track, price, details, handleClick }) => {
 
   return (
     <>
@@ -19,23 +19,23 @@ const Card = ({ track, price, details }) => {
           </p>
           <div className="d-none d-lg-block">
             <div className="d-grid w-75">
-                <Button size="lg" component="link" >
+                <Button size="lg" component="link" onClick={handleClick} disabled={price === 'custom' && 'disabled'}>
                   Buy Now
                 </Button>
             </div>
           </div>
         </div>
         <p className="text-orange fw-bold fs-4 d-none d-lg-block">
-          {price !== 'custom' && <span dangerouslySetInnerHTML={{__html: naira}} />}
-          {price}
+          {price !== 'custom' && <span dangerouslySetInnerHTML={{__html: naira}} className="me-1" />}
+          {price !== 'custom' ? price.toLocaleString() : 'custom'}
         </p>
       </div>
       <div className="d-flex d-lg-none justify-content-between align-items-center">
         <p className="text-orange fw-bold fs-4 mb-0">
-          {price !== 'custom' && <span dangerouslySetInnerHTML={{__html: naira}} />}
-          {price}
+          {price !== 'custom' && <span dangerouslySetInnerHTML={{__html: naira}} className="me-1" />}
+          {price !== 'custom' ? price.toLocaleString() : 'custom'}
         </p>
-        <Button size="lg" component="link" className="px-3 py-2">
+        <Button size="lg" component="link" className="px-3 py-2" onClick={handleClick} disabled={price === 'custom' && 'disabled'}>
           Buy Now
         </Button>
       </div>
