@@ -12,7 +12,30 @@ import social3 from '../assets/social3.jpg'
 import random1 from '../assets/random1.jpg'
 import random2 from '../assets/random2.png'
 import random3 from '../assets/random3.jpg'
-import { Button, Container } from 'react-bootstrap';
+import { Button, Col, Container, Row } from 'react-bootstrap';
+
+const categories = [
+  {
+    price: '100,000',
+    description: "This package involves an unlimited access to pictures to a number of 3 people and change of wears based on users choice",
+    category: "Premium"
+  },
+  {
+    price: '75,000',
+    description: "This package involves an unlimited access to pictures to a number of 3 people and change of wears based on users choice",
+    category: "Standard"
+  },
+  {
+    price: '50,000',
+    description: "This package involves an unlimited access to pictures to a number of 3 people and change of wears based on users choice",
+    category: "Medium"
+  },
+  {
+    price: 'custom',
+    description: "This package involves an unlimited access to pictures to a number of 3 people and change of wears based on users choice",
+    category: "Custom"
+  }
+]
 
 const profilePage = () => {
   
@@ -48,35 +71,23 @@ const profilePage = () => {
             <p>My name is John, i come across as a down-to-earth yet highly professional photographer. My writing is clever and imaginative, so also do i love to take creative intriuging and controversial images whether of animals, people or objects.</p>
         </section>
         <section className='services mb-5'>
-        <h3 className='mb-3'>Services</h3>
-          <div className='cards'>
-            <Card
-              price="$350"
-              details="This package involves an unlimited access to pictures to a number of 3
-              people and change of wears based on users choice"
-            track="Premium"
-            />
-            <Card
-              price="$250"
-              details="This package involves an unlimited access to pictures to a number of 3
-              people and change of wears based on users choice"
-            track="Standard"
-            />
-          </div>
-          <div className='cards'>
-          <Card
-              price="$150"
-              details="This package involves an unlimited access to pictures to a number of 3
-              people and change of wears based on users choice"
-            track="Medium"
-            />
-             <Card
-              price="custom"
-              details="This package involves an unlimited access to pictures to a number of 3
-              people and change of wears based on users choice"
-            track="Custom"
-            />
-            </div>
+          <h3 className='mb-3'>Services</h3>
+          <Row xs={1} md={2} className='cards card-custom-gap'>
+            {
+              categories.map((category, index) => {
+                return (
+                  <Col key={index}>
+                    <Card
+                      price={category.price}
+                      details={category.description}
+                      track={category.category}
+                    />
+                  </Col>
+                )
+              })
+            }
+
+          </Row>
         </section>
         <section className='projects mb-5'>
         <h3 className='mb-3'> Top Projects</h3>

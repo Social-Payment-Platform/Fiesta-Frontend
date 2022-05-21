@@ -1,16 +1,16 @@
 .home {
   display: block;
-  margin: 1rem;
+  margin: 3rem 0;
   padding: 1rem;
     @include media-breakpoint-up(sm) {
         display: flex;
         margin: 2rem 1rem 2rem 0;
     }
   .FiestaBio {
-    width: 100%;
+    // width: 100%;
 
     @include media-breakpoint-up(sm) {
-      width: 55vw;
+      // width: 55vw;
       padding: 2.5rem;
     }
 
@@ -29,18 +29,14 @@
       color: #9d9d9d;
     }
     .getStarted {
-      width: 50%;
       margin-top: 1rem;
-      text-align: center;
-      @include media-breakpoint-up(sm) {
-        width: 30%;
-      }
+
       button {
         background-color: #fc8f00;
         border: #fc8f00;
         font-size: 1.5rem;
         font-weight: 500;
-        padding: 1rem 3rem;
+        padding: 1rem 1.5rem;
         border-radius: 10px;
         &:hover,
         &:focus {
@@ -51,12 +47,6 @@
     }
   }
   .heroImageSection {
-    display: none;
-
-    @include media-breakpoint-up(sm) {
-      display: block;
-      width: 45vw;
-    }
     img {
       width: 100%;
       object-fit: contain;
@@ -66,8 +56,5 @@
 @media only screen and (max-width: 768px) {
   .FiestaBio {
     width: 100% !important;
-  }
-  .heroImageSection {
-    display: none !important;
   }
 }

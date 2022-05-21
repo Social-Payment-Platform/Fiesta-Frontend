@@ -29,7 +29,7 @@ button {
 
 .home {
   display: block;
-  margin: 1rem;
+  margin: 3rem 0;
   padding: 1rem;
 }
 
@@ -42,13 +42,8 @@ button {
   }
 }
 
-.home .FiestaBio {
-  width: 100%;
-}
-
 @media (min-width: 576px) {
   .home .FiestaBio {
-    width: 55vw;
     padding: 2.5rem;
   }
 }
@@ -73,15 +68,7 @@ button {
 }
 
 .home .FiestaBio .getStarted {
-  width: 50%;
   margin-top: 1rem;
-  text-align: center;
-}
-
-@media (min-width: 576px) {
-  .home .FiestaBio .getStarted {
-    width: 30%;
-  }
 }
 
 .home .FiestaBio .getStarted button {
@@ -89,24 +76,13 @@ button {
   border: #fc8f00;
   font-size: 1.5rem;
   font-weight: 500;
-  padding: 1rem 3rem;
+  padding: 1rem 1.5rem;
   border-radius: 10px;
 }
 
 .home .FiestaBio .getStarted button:hover, .home .FiestaBio .getStarted button:focus {
   border: 1px solid #fcfcfc;
   background-color: #fc8f00;
-}
-
-.home .heroImageSection {
-  display: none;
-}
-
-@media (min-width: 576px) {
-  .home .heroImageSection {
-    display: block;
-    width: 45vw;
-  }
 }
 
 .home .heroImageSection img {
@@ -119,9 +95,6 @@ button {
   .FiestaBio {
     width: 100% !important;
   }
-  .heroImageSection {
-    display: none !important;
-  }
 }
 
 .sign-in {
@@ -132,9 +105,15 @@ button {
 }
 
 .form-section {
-  padding: 4rem;
+  padding: 0 4rem 3rem;
   background-color: #fcfcfc;
   margin: 0;
+}
+
+@media (max-width: 991.98px) {
+  .form-section {
+    padding: 0 2.5rem 3rem;
+  }
 }
 
 .form-section nav {
@@ -171,6 +150,12 @@ button {
   width: 70%;
 }
 
+@media (max-width: 1199.98px) {
+  .form-section form {
+    width: 100%;
+  }
+}
+
 .form-section form input {
   margin-bottom: 2rem;
   padding: 0.8rem;
@@ -185,12 +170,16 @@ button {
 }
 
 .form-section form input[type="checkbox"] {
-  padding: 0.2;
+  padding: 0.2rem;
   margin-right: 1rem;
 }
 
 .form-section form input[type="checkbox"]:focus, .form-section form input[type="checkbox"]:checked {
   background-color: #fc8f00;
+}
+
+.form-section form .form-text {
+  font-size: 0.9rem;
 }
 
 .form-section form .d-grid {
@@ -236,13 +225,13 @@ button {
   margin: 1rem auto;
 }
 
-.form-section .social-button button {
+.form-section .social-button a {
   color: #5b5b5b;
   background-color: transparent;
   border: 2px solid #eeeeee;
 }
 
-.form-section .social-button button svg {
+.form-section .social-button a svg {
   font-size: 1.6rem;
   margin-right: 0.7rem;
   color: #4267B2;
@@ -276,14 +265,29 @@ button {
     display: none;
   }
   .form-section {
-    padding: 3rem;
+    padding: 0 3rem 2rem;
   }
+  .form-section form {
+    width: 75%;
+    margin: 0 auto;
+  }
+}
+
+@media only screen and (max-width: 768px) and (max-width: 575.98px) {
   .form-section form {
     width: 100%;
   }
+}
+
+@media only screen and (max-width: 768px) {
   .form-section form .form-footer {
-    display: block;
     text-align: center;
+  }
+}
+
+@media only screen and (max-width: 768px) and (max-width: 575.98px) {
+  .form-section {
+    padding: 0 1.3rem 3rem;
   }
 }
 
@@ -351,18 +355,13 @@ button {
 }
 
 .card-section {
-  width: 45%;
   border: 2px solid #eeeeee;
   padding: 1rem;
   border-radius: 8px;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-}
-
-.card-section .card-details {
-  width: 65%;
-  overflow-wrap: break-word;
+  height: 100%;
 }
 
 .card-section svg {
@@ -392,6 +391,11 @@ button {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+}
+
+.services .card-custom-gap {
+  --bs-gutter-y: 2.25rem;
+  --bs-gutter-x: 2.25rem;
 }
 
 @media only screen and (max-width: 768px) {
