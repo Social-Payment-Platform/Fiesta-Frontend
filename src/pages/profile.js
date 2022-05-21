@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Navbar from "../components/navbar";
 import Footer from "../components/footer";
 import Card from "../components/card";
@@ -8,12 +8,11 @@ import { Button, Col, Container, Row } from "react-bootstrap";
 import profileImage from "../assets/profile-image.jpg"
 import Carousel from '../components/carousel';
 import social1 from '../assets/social1.png';
-import social2 from '../assets/social2.jpg'
-import social3 from '../assets/social3.jpg'
-import random1 from '../assets/random1.jpg'
+import social2 from '../assets/social2.png'
+import social3 from '../assets/social3.png'
+import random1 from '../assets/random1.png'
 import random2 from '../assets/random2.png'
 import random3 from '../assets/random3.jpg'
-import { Button, Col, Container, Row } from 'react-bootstrap';
 // import { Context } from '../context';
 // import credo from '../services/config';
 // import { appBaseUrl } from '../helpers/variables';
