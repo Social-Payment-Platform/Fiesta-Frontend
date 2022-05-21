@@ -13,9 +13,7 @@ import social3 from '../assets/social3.png'
 import random1 from '../assets/random1.png'
 import random2 from '../assets/random2.png'
 import random3 from '../assets/random3.png'
-// import { Context } from '../context';
-// import credo from '../services/config';
-// import { appBaseUrl } from '../helpers/variables';
+import Payment from '../services/payment';
 
 const categories = [
   {
@@ -42,25 +40,28 @@ const categories = [
 ];
 
 const ProfilePage = () => {
-  // const { userDetails } = useContext(Context)
 
   useEffect(() => {
     window.scrollTo(0, 0)
   }, [])
 
-  // const handlePayment = (amount) => {
-  //   console.log('i am working')
-  //   // credo.initiatePayments({
-  //   //   "amount": amount,
-  //   //   "currency": "NGN",
-  //   //   "redirectUrl": `${ appBaseUrl }/payment-successful`,
-  //   //   "transRef": "iy67f64hvc63",
-  //   //   "paymentOptions": "CARD,BANK",
-  //   //   "customerEmail": userDetails.email,
-  //   //   "customerName": userDetails.username,
-  //   //   "customerPhoneNo": "+2348066282658"
-  //   // });
-  // }
+  const handlePayment = async amount => {
+    try {
+      const response = await Payment.makePayment({ 
+        phone: '+2341989289253',
+        amount: amount,
+        services: ['photography']
+      })
+      if (response.status === 200) {
+        let params = `scrollbars=no,resizable=no,status=no,location=no,toolbar=no,menubar=no,
+        width=800,height=700,left=300,top=200`;
+
+        window.open(response.data.paymentLink, 'Pay Fiesta', params);
+      }
+    } catch (e) {
+      alert('An error occurred')
+    }
+  }
   
   return (
     <>
@@ -115,7 +116,7 @@ const ProfilePage = () => {
                       price={category.price}
                       details={category.description}
                       track={category.category}
-                      // handleClick={() => handlePayment(category.price)}
+                      handleClick={() => handlePayment(category.price)}
                     />
                   </Col>
                 )

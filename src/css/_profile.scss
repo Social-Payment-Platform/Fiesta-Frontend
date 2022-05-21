@@ -73,6 +73,9 @@
       border: 1px solid #fcfcfc;
       background-color: #fc8f00;
     }
+    &.btn:disabled {
+      background-color: gray;
+    }
   }
 }
 .cards {

@@ -74,7 +74,7 @@ const SignUp = () => {
 				alert('User already exists')
 			}
 		} else {
-				alert('Ensure all fields are filled')
+			alert('Ensure all fields are filled')
 		}
 	}
 
