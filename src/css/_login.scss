@@ -5,9 +5,12 @@
   // height: 120vh;
 }
 .form-section {
-  padding: 4rem;
+  padding: 0 4rem 3rem;
   background-color: #fcfcfc;
   margin: 0;
+  @include media-breakpoint-down(lg) {
+    padding: 0 2.5rem 3rem;
+  }
   nav {
     display: flex;
     align-items: center;
@@ -31,6 +34,9 @@
   form {
     margin-top: 1rem;
     width: 70%;
+    @include media-breakpoint-down(xl) {
+      width: 100%;
+    }
     input {
       margin-bottom: 2rem;
       padding: 0.8rem;
@@ -43,12 +49,16 @@
     }
 
     input[type="checkbox"] {
-      padding: 0.2;
+      padding: 0.2rem;
       margin-right: 1rem;
       &:focus,
       &:checked {
         background-color: #fc8f00;
       }
+    }
+
+    .form-text {
+      font-size: 0.9rem;
     }
     .d-grid {
       width: 100%;
@@ -82,7 +92,8 @@
   }
   .social-button {
     margin: 1rem auto;
-    button {
+
+    a {
       color: #5b5b5b;
       background-color: transparent;
       border: 2px solid #eeeeee;
@@ -116,14 +127,21 @@
   }
   .form-section {
     // width: 100%;
-    padding: 3rem;
+    padding: 0 3rem 2rem;
     form {
-      width: 100%;
+      width: 75%;
+      margin: 0 auto;
+      @include media-breakpoint-down(sm) {
+        width: 100%;
+      }
       // height: 100vh;
       .form-footer {
-        display: block;
+        // display: block;
         text-align: center;
       }
+    }
+    @include media-breakpoint-down(sm) {
+      padding: 0 1.3rem 3rem;
     }
   }
 }

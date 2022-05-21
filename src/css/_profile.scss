@@ -44,15 +44,16 @@
 }
 
 .card-section {
-  width: 45%;
+  // width: 45%;
   border: 2px solid #eeeeee;
   padding: 1rem;
   border-radius: 8px;
   justify-content: space-between;
-  .card-details {
-    width: 65%;
-    overflow-wrap: break-word;
-  }
+  height: 100%;
+  // .card-details {
+  //   width: 65%;
+  //   overflow-wrap: break-word;
+  // }
   svg {
     font-size: 3rem;
     color: #5b5b5b;
@@ -76,6 +77,12 @@
   margin-bottom: 2rem;
   justify-content: space-between;
 }
+
+.services .card-custom-gap {
+  --bs-gutter-y: 2.25rem;
+  --bs-gutter-x: 2.25rem;
+}
+
 @media only screen and (max-width: 768px) {
   .cards,
   .slider,

@@ -6,6 +6,7 @@ To Start contributing to Fiesta App:
 1. Clone the repository
 2. Create a new branch
 3. Run `npm install`
+4. Create .env file using .env.sample template
 4. Run `npm start`
 
 ## Available Scripts

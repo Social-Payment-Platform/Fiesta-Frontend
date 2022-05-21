@@ -9,7 +9,7 @@ const NavbarComponent = () => {
     const { user, userDetails } = useContext(Context)
     
     return (
-        <Navbar collapseOnSelect expand="lg">
+        <Navbar sticky="top" collapseOnSelect expand="lg">
             <Container className='px-1'>
                 <Navbar.Brand href="/">
                     <img src={logo} alt="brand-logo" />
